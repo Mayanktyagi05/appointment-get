@@ -35,6 +35,15 @@ function saveToLocalStorage(event){
     })
     console.log(data)
   })
+
+  // delete 
+  axios.delete("https://crudcrud.com/api/936a96b95a384840ae3de78ec36e6738/appointmentdata/6524dbdf2e0fb203e853de3", obj)
+    .then((response) => {
+      showUserOnScreen(response.data)
+      console.log(response);
+    }).catch((err) => {
+      console.log(err);
+    });
   
   function showUserOnScreen(obj){
     const parentElem = document.getElementById('listofitems');
